@@ -11,7 +11,19 @@ namespace TriangleTracker
       {
         return true;
       }
-      return false;
+      else if(a != b && b != c && c != a && a + b == c)
+      {
+        return true;
+      }
+      else if((a==b && (a+b) > c) || (b==c && (b+c) >a ) || (c == a && (c+a) > b))
+      {
+        return true;
+      } 
+      else
+      {
+        return false;
+      }
+      
     }
   }
 }
